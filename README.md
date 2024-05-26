@@ -5,7 +5,7 @@
   <img alt="Static Badge" src="https://img.shields.io/badge/Thanks_for-Stopping_In-blue">
   <a href="https://github.com/mfts/papermark/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
 </div>
-
+<br>
 This project involves creating an AWS Lambda function to convert phone numbers to vanity numbers, saving the best 5 resulting numbers and the caller’s number in a DynamoDB table. An Amazon Connect contact flow then retrieves and announces the top 3 vanity possibilities to the caller.
 
 # Give it a Ring! Call: 213-596-4228
