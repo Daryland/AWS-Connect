@@ -1,7 +1,7 @@
-# Vanity Phone Number Converter with Amazon Connect
+# AWS Connect Vanity Phone
 <br>
 <div align="center">
-  <a href="https://github.com/mfts/papermark/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mfts/papermark"></a>
+  <a href="https://github.com/Daryland/AWS-Connect"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mfts/papermark"></a>
   <img alt="Static Badge" src="https://img.shields.io/badge/Thanks_for-Stopping_In-blue">
   <a href="https://github.com/mfts/papermark/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
 </div>
