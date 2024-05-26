@@ -8,6 +8,8 @@
 
 This project involves creating an AWS Lambda function to convert phone numbers to vanity numbers, saving the best 5 resulting numbers and the caller’s number in a DynamoDB table. An Amazon Connect contact flow then retrieves and announces the top 3 vanity possibilities to the caller.
 
+# Give it a Ring! Call: 213-596-4228
+
 ## Deliverables
 1. Git repository with all code and documentation.
 2. Working Amazon Connect phone number to test in the environment.
@@ -36,15 +38,13 @@ Document the reasoning, struggles, and solutions throughout the project.
 
 #### Implementation Reasoning
 - **Initial Struggles**: Understanding AWS infrastructure and tools after previous negative experiences.
-- **Learning Curve**: Overcoming information overload and error handling with limited mentorship.
-- **Project Start**: Set up the AWS Connect environment, attempted web scraping for the vanity number dictionary, and structured the Lambda function.
+- **Learning Curve**: Overcoming information overload and error handling with limited mentorship and experience in error handling.
+- **Project Start**: Set up the AWS Connect environment, attempted web scraping with Python for the vanity number dictionary, and structured the Lambda function.
 
 #### Challenges and Solutions
-- **Software Stack Overwhelm**: Managed by focusing on sprint-based learning and leveraging available resources.
+- **Software Stack Overwhelm**: Managed by focusing on sprint-based learning and leveraging available resources. Using the resources I found in [Notes](/notes.txt). Whitepages for AWS services as well as Youtube links regarding linking Lambda functions to DynamoDB. Doing the same and more examples of the fully worked code to see different ways to lay the functions out. 
 - **Error Handling**: Practiced through Python, utilizing Rubber Duck debugging with a whiteboard.
 
 #### Shortcuts and Production Practices
-- **Shortcuts**: Not all error handling paths are fully fleshed out.
+- **Shortcuts**: Not all error handling paths are fully fleshed out. 
 - **Improvements with More Time**: Better error handling, optimization of the vanity number generation, and thorough testing.
-
-## Repository Structure
