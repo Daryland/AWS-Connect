@@ -66,3 +66,41 @@ const selectBestVanityNumbers = (vanityNumbers) => {
 };
 
 // Lambda Handler Function 
+exports.handler = async (event) => {
+  const phoneNumber = event.phoneNumber;
+
+  if (!phoneNumber) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'Phone number is required' })
+    };
+  }
+
+  const vanityNumbers = generateVanityNumbers(phoneNumber);
+  const bestVanityNumbers = selectBestVanityNumbers(vanityNumbers);
+
+  const params = {
+    TableName: tableName,
+    Item: {
+      PhoneNumber: phoneNumber,
+      VanityNumbers: bestVanityNumbers
+    }
+  };
+
+  try {
+    await dynamo.put(params).promise();
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        phoneNumber,
+        topVanityNumbers: bestVanityNumbers.slice(0, 3)
+      })
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Error saving to DynamoDB' })
+    };
+  }
+};

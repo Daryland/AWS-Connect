@@ -57,7 +57,7 @@ else:
 matching_words = []	# Create list to contain all matches found
 
 for i in range(len(input_number)): # Parse input number into smaller sections
-    for j in range(i + 1, len(input_number) + 1):
+    for j in range(i + 1, len(input_number) + 1): # Loop through all possible sections
         section = input_number[i:j] # Get section of input number
         if 5 <= len(section) <= 7: # Filter out sections with length greater than 7 or less than 2
            # print(section)
