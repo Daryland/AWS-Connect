@@ -1,6 +1,6 @@
 const { handler } = require('./index'); // Adjust the path as needed
 
-const runTest = async (testInput, expectedOutput) => {
+const runTest = async (testInput, expectedOutput) => { 
   const event = testInput;
   const response = await handler(event);
 

@@ -1,4 +1,4 @@
-# AWS Connect Vanity Phone
+# AWS Connect Vanity Phone Number
 <br>
 <div align="center">
   <img alt="Static Badge" src="https://img.shields.io/badge/Thanks_for-Stopping_In-blue">
