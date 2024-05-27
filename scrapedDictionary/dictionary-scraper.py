@@ -65,6 +65,6 @@ for i in range(len(input_number)): # Parse input number into smaller sections
                 if section == numeric_code: # Change this line of code to allow flexibility in capturing more results
                     print(section, numeric_code, word)
 
-# save the scraped data to a JSON file
-# with open('dictionary.json', 'w') as f: 
-#    json.dump(word_dict, f)
+# Save the scraped data to a JSON file
+with open('dictionary.json', 'w') as f:
+    json.dump(word_dict, f)
