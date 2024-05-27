@@ -1,9 +1,7 @@
 # AWS Connect Vanity Phone
 <br>
 <div align="center">
-  <a href="https://github.com/Daryland/AWS-Connect"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mfts/papermark"></a>
   <img alt="Static Badge" src="https://img.shields.io/badge/Thanks_for-Stopping_In-blue">
-  <a href="https://github.com/mfts/papermark/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
 </div>
 <br>
 This project involves creating an AWS Lambda function to convert phone numbers to vanity numbers, saving the best 5 resulting numbers and the caller’s number in a DynamoDB table. An Amazon Connect contact flow then retrieves and announces the top 3 vanity possibilities to the caller.
@@ -47,4 +45,4 @@ Document the reasoning, struggles, and solutions throughout the project.
 
 #### Shortcuts and Production Practices
 - **Shortcuts**: Not all error handling paths are fully fleshed out. 
-- **Improvements with More Time**: Better error handling, optimization of the vanity number generation, and thorough testing.
+- **Improvements with More Time**: Better error handling, optimization of the vanity number generation, and thorough testing. I would also have been using a secondary branch instead of the "Main" branch to push code through. 

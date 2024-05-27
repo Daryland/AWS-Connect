@@ -3,6 +3,9 @@
 const AWS = require('aws-sdk');
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
+// Import the dictionary.json file
+const dictionary = require('./dictionary.json');
+
 // Define your table name here
 const tableName = 'vanityNumbers';
 

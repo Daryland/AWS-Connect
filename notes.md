@@ -4,6 +4,8 @@ https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github
 https://docs.aws.amazon.com/connect/latest/adminguide/connect-lambda-functions.html#tutorial-invokelambda 
 https://www.youtube.com/@BusyPing 
 
+# Random 
+
 # Descriptions:
 
 Define "arn" what it's used for and how to invoke it
@@ -12,9 +14,11 @@ unambiguously across all of AWS, such as in IAM policies, Amazon Relational Data
 and API calls.
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html 
 
-# Python Scripting 
+# Python Scripting and Errors
 
 https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/ 
+https://realpython.com/beautiful-soup-web-scraper-python/ 
+https://www.freecodecamp.org/news/how-to-handle-errors-in-python/ 
 
 # Lambda information
 
