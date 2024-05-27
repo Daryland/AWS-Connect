@@ -37,12 +37,12 @@ This flow looks at the caller’s phone number and announces the top 3 vanity po
 Document the reasoning, struggles, and solutions throughout the project.
 
 #### Implementation Reasoning
-- **Initial Struggles**: Understanding AWS infrastructure and tools after previous negative experiences.
+- **Initial Struggles**: Understanding AWS infrastructure and tools after previous negative experiences. Outside of that a lot of the documentation or tutorials that I found were 3-5 years old. 
 - **Learning Curve**: Overcoming information overload and error handling with limited mentorship and experience in error handling.
 - **Project Start**: Set up the AWS Connect environment, attempted web scraping with Python for the vanity number dictionary, and structured the Lambda function.
 
 #### Challenges and Solutions
-- **Software Stack Overwhelm**: Managed by focusing on sprint-based learning and leveraging available resources. Using the resources I found in [Notes](/notes.txt). Whitepages for AWS services as well as Youtube links regarding linking Lambda functions to DynamoDB. Doing the same and more examples of the fully worked code to see different ways to lay the functions out. 
+- **Software Stack Overwhelm**: Managed by focusing on sprint-based learning and leveraging available resources. Using the resources I found in [Notes](/notes.md). Whitepages for AWS services as well as Youtube links regarding linking Lambda functions to DynamoDB. Doing the same and more examples of the fully worked code to see different ways to lay the functions out. 
 - **Error Handling**: Practiced through Python, utilizing Rubber Duck debugging with a whiteboard.
 
 #### Shortcuts and Production Practices

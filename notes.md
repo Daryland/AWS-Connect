@@ -2,6 +2,7 @@
 
 https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html 
 https://docs.aws.amazon.com/connect/latest/adminguide/connect-lambda-functions.html#tutorial-invokelambda 
+https://www.youtube.com/@BusyPing 
 
 # Descriptions:
 
@@ -24,3 +25,4 @@ https://www.youtube.com/watch?v=ijyeE-pXFk0
 
 https://docs.aws.amazon.com/sdk-for-javascript/
 https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/actions/document-client/get.js#L6
+https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/javascript_dynamodb_code_examples.html 

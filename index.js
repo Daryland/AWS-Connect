@@ -62,42 +62,43 @@ const selectBestVanityNumbers = (vanityNumbers) => {
   scoredNumbers.sort((a, b) => b.score - a.score);
 
   // Select top 5 vanity numbers
-  return scoredNumbers.slice(0, 5).map(item => item.number); 
+  return scoredNumbers.slice(0, 5).map(item => item.number);  // returns an array containing the number 
+  // values of the first 5 objects in the scoredNumbers array.
 };
 
 // Lambda Handler Function 
-exports.handler = async (event) => {
-  const phoneNumber = event.phoneNumber;
+exports.handler = async (event) => { // async handler function to handle incoming events
+  const phoneNumber = event.phoneNumber; // Get phone number from event
 
-  if (!phoneNumber) {
+  if (!phoneNumber) { // If phone number is not provided
     return {
-      statusCode: 400,
-      body: JSON.stringify({ message: 'Phone number is required' })
+      statusCode: 400, 
+      body: JSON.stringify({ message: 'Phone number is required' }) // Return error message
     };
   }
 
-  const vanityNumbers = generateVanityNumbers(phoneNumber);
-  const bestVanityNumbers = selectBestVanityNumbers(vanityNumbers);
+  const vanityNumbers = generateVanityNumbers(phoneNumber); // Generate all possible vanity numbers
+  const bestVanityNumbers = selectBestVanityNumbers(vanityNumbers);  // Select best vanity numbers
 
-  const params = {
-    TableName: tableName,
-    Item: {
-      PhoneNumber: phoneNumber,
-      VanityNumbers: bestVanityNumbers
+  const params = { // Save best vanity numbers to DynamoDB
+    TableName: tableName, // Table name defined above
+    Item: { // Item to save to DynamoDB
+      PhoneNumber: phoneNumber,  // Phone number to save
+      VanityNumbers: bestVanityNumbers // Best vanity numbers to save
     }
   };
 
-  try {
-    await dynamo.put(params).promise();
-    return {
+  try { // Try to save to DynamoDB
+    await dynamo.put(params).promise(); // Save to DynamoDB
+    return { // Return best vanity numbers
       statusCode: 200,
-      body: JSON.stringify({
+      body: JSON.stringify({ // Return best vanity numbers
         phoneNumber,
-        topVanityNumbers: bestVanityNumbers.slice(0, 3)
+        topVanityNumbers: bestVanityNumbers.slice(0, 3) // Return top 3 vanity numbers
       })
     };
-  } catch (error) {
-    console.error(error);
+  } catch (error) { 
+    console.error(error); //If error, log error
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Error saving to DynamoDB' })
