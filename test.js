@@ -1,10 +1,11 @@
 const { handler } = require('./index'); // Adjust the path as needed
+const dictionary = require('./scrapedDictionary/dictionary.json');
 
 const runTest = async (testInput, expectedOutput) => { 
   const event = testInput;
   const response = await handler(event);
 
-  console.log('Test Input:', JSON.stringify(testInput)); 
+  console.log('Test Input:', JSON.stringify(testInput)); // 
   console.log('Expected Output:', JSON.stringify(expectedOutput));
   console.log('Actual Output:', JSON.stringify(response));
   console.log(response.statusCode === expectedOutput.statusCode && JSON.stringify(response.body) === JSON.stringify(expectedOutput.body) ? 'Test Passed' : 'Test Failed');

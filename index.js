@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
 // Import the dictionary.json file
-const dictionary = require('./dictionary.json');
+const dictionary = require('./scrapedDictionary/dictionary.json');
 
 // Define your table name here
 const tableName = 'vanityNumbers';
@@ -57,8 +57,8 @@ const generateVanityNumbers = (phoneNumber) => { // generate all possible vanity
 const selectBestVanityNumbers = (vanityNumbers) => {
   // Score vanity numbers
   const scoredNumbers = vanityNumbers.map(vanityNumber => ({
-    number,
-    score: scoreVanityNumber(number)
+    number: vanityNumber,
+    score: scoreVanityNumber(vanityNumber)
   }));
   
   // Sort vanity numbers by score in descending order
