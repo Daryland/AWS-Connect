@@ -1,5 +1,4 @@
-// Lambda for converting a callers phone number into possible vanity numbers
-// The program saves top 5 in DynamoDB and returns top 3
+// Lambda for converting a phone numbers into vanity numbers
 const AWS = require('aws-sdk')
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
@@ -43,7 +42,10 @@ exports.numberToWords = (dictionary, userNumber) => { // dictionary is a json fi
   const vowels = 'AEIOUaeiou';  
   return str.split('').filter(char => vowels.includes(char)).length; 
 }  
-for (const word in dictionary) { // Loop through the dictionary
+// console.log(countVowels('Hello'));
+
+// Loop through the dictionary
+for (const word in dictionary) { 
   if (userNumber.includes(dictionary[word].number)) { // If the number matches the number in the dictionary
     const vanityNumber = userNumber.replace(dictionary[word].number, dictionary[word].word.toUpperCase()) // Replace the number with the word
     const formattedNumber = vanityNumber.slice(0, 3) + '-' + vanityNumber.slice(3, 6) + '-' + vanityNumber.slice(6, 10) // Format the number
@@ -51,9 +53,10 @@ for (const word in dictionary) { // Loop through the dictionary
   }
 }
  
+// Sort vanity numbers based on the number of vowels
   while (vanityNumbers.length < 5) { 
-    let randomNumber = exports.getRandomChar(userNumber);
-    if (randomNumber !== '0' && randomNumber !== '1') {
+    let randomNumber = exports.getRandomChar(userNumber); // Get a random character from the number
+    if (randomNumber !== '0' && randomNumber !== '1') { 
       let newNumber = userNumber.replace(randomNumber, exports.getRandomChar(phoneKeypad[randomNumber])); // Replace the number with a random character
       if (!vanityNumbers.includes(newNumber)) { // If the number is not already in the array
         vanityNumbers.push(newNumber); // Add the number to the array
@@ -62,22 +65,22 @@ for (const word in dictionary) { // Loop through the dictionary
   }
 
   // Sort vanity numbers based on the number of vowels
-  vanityNumbers.sort((a, b) => countVowels(b) - countVowels(a));
+  // vanityNumbers.sort((a, b) => countVowels(b) - countVowels(a));
 
   return vanityNumbers.slice(0, 5); // return top 5 vanity numbers
 }
 
 
 // Select Best Vanity Numbers
-const selectBestVanityNumbers = (vanityNumbers) => {
+const selectBestVanityNumbers = (vanityNumbers) => { 
   // Score vanity numbers
-  const scoredNumbers = vanityNumbers.map(vanityNumber => ({
-    number: vanityNumber,
-    score: scoreVanityNumber(vanityNumber)
+  const scoredNumbers = vanityNumbers.map(vanityNumber => ({ 
+    number: vanityNumber, // number is the vanityNumber
+    score: scoreVanityNumber(vanityNumber) // score is the score of the vanityNumber
   }));
   
   // Sort vanity numbers by score in descending order
-  scoredNumbers.sort((a, b) => b.score - a.score);
+  scoredNumbers.sort((a, b) => b.score - a.score); // Sorts the scoredNumbers array in descending order based on the score of each object.
   // Select top 5 vanity numbers
   return scoredNumbers.slice(0, 5).map(item => item.number);  // returns an array containing the number 
   // values of the first 5 objects in the scoredNumbers array.
