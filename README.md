@@ -44,7 +44,7 @@ The solution that seemed to be the most fitting was using Keypad mapping that lo
 - **Initial Struggles**: Understanding AWS infrastructure and tools after previous negative experiences. Outside of that a lot of the documentation or tutorials that I found were 3-5 years old. 
 - **Learning Curve**: Overcoming information overload and error handling with limited mentorship and experience in error handling.
 - **Software Stack**: Focused on sprint-based learning and leveraging available resources. Using the resources I found in [Notes](/notes.md). Whitepages for AWS services as well as Youtube links regarding linking Lambda functions to DynamoDB. Doing the same and more examples of the fully worked code to see different ways to lay the functions out. 
-- **Error Handling**: Practiced through Python, utilizing Rubber Duck debugging with a whiteboard. Made an attempt at debugging and running through error handling with JavaScript but kept hitting road blocks. 
+- **Error Handling**: Ran error handling through the python script and output that I ran to create the initial dictionary, utilizing Rubber Duck debugging with a whiteboard. Made an attempt at debugging and running through error handling with JavaScript but kept hitting road blocks. 
 
 #### Shortcuts and Production Practices
 - **Shortcuts**: Not all error handling paths are fully fleshed out. I tried to reach out to a couple of people to see if they had any input for that might help me get past some of the errors I was dealing with but both parties lacked time. 
