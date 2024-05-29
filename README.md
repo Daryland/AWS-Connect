@@ -29,7 +29,7 @@ This flow welcomes the customer into the call, moves into the Lambda function th
 ## Document the reasoning, struggles, and solutions throughout the project.
 
 #### Implementation Reasoning
-The solution that seemed to be the most fitting was using Keypad mapping that loops through all words in the wordlist and attempts to match them against 
+The solution that seemed to be the most fitting was using Keypad mapping that loops through all words in the wordlist and attempts to match them against vowels to define "Best". '0' and '1' have no letters tied to them so making an attempt to pull a random letter for a word after a loop. 
 
 #### Steps
 1. **Keypad Mapping**: Map numbers to corresponding letters.
