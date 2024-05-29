@@ -2,9 +2,18 @@
 
 https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html 
 https://docs.aws.amazon.com/connect/latest/adminguide/connect-lambda-functions.html#tutorial-invokelambda 
+https://docs.aws.amazon.com/connect/latest/adminguide/connect-lambda-functions.html#add-lambda-function 
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html 
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html 
+https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html
+https://www.youtube.com/watch?v=upSnt-5-vuk4
+https://www.youtube.com/watch?v=CjVPMocEECM
 https://www.youtube.com/@BusyPing 
 
 # Random 
+
+https://www.hanginghyena.com/finder/phone-number-to-words 
+https://shields.io/badges/static-badge 
 
 # Descriptions:
 
