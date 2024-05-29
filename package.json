@@ -8,11 +8,11 @@
     "start": "node index.js",
     "lint": "eslint ."
   },
-  "author": "Your Name <your.email@example.com>",
+  "author": "Daniel Ryland <daniel.ryland@pm.me>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/aws-connect-vanity-numbers.git"
+    "url": "https://github.com/Daryland/AWS-Connect"
   },
   "keywords": [
     "aws",

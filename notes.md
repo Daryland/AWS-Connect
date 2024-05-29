@@ -8,6 +8,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html
 https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html
 https://www.youtube.com/watch?v=upSnt-5-vuk4
 https://www.youtube.com/watch?v=CjVPMocEECM
+https://www.youtube.com/watch?v=3Ar1ABlD_Vs 
 https://www.youtube.com/@BusyPing 
 
 # Random 
