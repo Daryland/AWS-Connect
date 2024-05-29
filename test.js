@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { getRandomChar } = require('./index.mjs'); // Adjust the path if needed
+const { getRandomChar } = require('./index.js'); // Adjust the path if needed
 
 
 describe('getRandomChar', () => {
