@@ -1,5 +1,5 @@
 {
-  "name": "AWSConnectVanityNumbers",
+  "name": "aws-connect-vanity-numbers",
   "version": "1.0.0",
   "description": "A project to manage vanity numbers for AWS Connect",
   "main": "index.js",

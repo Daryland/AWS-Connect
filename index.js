@@ -92,7 +92,7 @@ exports.handler = async (event) => { // async handler function to handle incomin
 
   if (!phoneNumber) { // If phone number is not provided
     return {
-      statusCode: 400, 
+      statusCode: 400, //Bad request
       body: JSON.stringify({ message: 'Phone number is required' }) // Return error message
     };
   }
@@ -111,7 +111,7 @@ exports.handler = async (event) => { // async handler function to handle incomin
   try { // Try to save to DynamoDB
     await dynamo.put(params).promise(); // Save to DynamoDB
     return { // Return best vanity numbers
-      statusCode: 200,
+      statusCode: 200, // Successful response
       body: JSON.stringify({ // Return best vanity numbers
         phoneNumber,
         topVanityNumbers: bestVanityNumbers.slice(0, 3) // Return top 3 vanity numbers
@@ -120,7 +120,7 @@ exports.handler = async (event) => { // async handler function to handle incomin
   } catch (error) { 
     console.error(error); //If error, log error
     return {
-      statusCode: 500,
+      statusCode: 500, // Internal server error
       body: JSON.stringify({ message: 'Error saving to DynamoDB' })
     };
   }
